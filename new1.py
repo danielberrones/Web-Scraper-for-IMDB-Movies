@@ -15,3 +15,48 @@ def scrapeMovies(url):
 
 
 scrapeMovies(url)
+
+
+def scrapeMovies(url):
+    '''Scrape IMBDB Top 250 Movies'''
+    r = requests.get(url)
+    soup = bs4.BeautifulSoup(r.text,'lxml')
+
+    tableData = [i.get_text() for i in soup.find_all('td', class_='titleColumn')]
+    
+    with open('file.txt','w') as f:
+        for i in tableData:
+            f.write(str(i.strip('/n')))
+
+
+scrapeMovies(url)
+
+
+def scrapeMovies(url):
+    '''Scrape IMBDB Top 250 Movies'''
+    r = requests.get(url)
+    soup = bs4.BeautifulSoup(r.text,'lxml')
+
+    tableData = [i.get_text() for i in soup.find_all('td', class_='titleColumn')]
+    
+    with open('file.txt','w') as f:
+        for i in tableData:
+            f.write(str(i.strip('/n')))
+
+
+scrapeMovies(url)
+
+
+def scrapeMovies(url):
+    '''Scrape IMBDB Top 250 Movies'''
+    r = requests.get(url)
+    soup = bs4.BeautifulSoup(r.text,'lxml')
+
+    tableData = [i.get_text() for i in soup.find_all('td', class_='titleColumn')]
+    
+    with open('file.txt','w') as f:
+        for i in tableData:
+            f.write(str(i.strip('/n')))
+
+
+scrapeMovies(url)
